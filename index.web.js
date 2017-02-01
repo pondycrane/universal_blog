@@ -4,9 +4,10 @@
  */
 
 import { AppRegistry } from 'react-native';
-import { App } from './src/scenes';
+//import { App } from './src/scenes';
+import Index from './src/app/index'; 
 
-AppRegistry.registerComponent('App', () => App);
+AppRegistry.registerComponent('App', () => Index);
 AppRegistry.runApplication('App', {
   rootTag: document.getElementById('react-root')
 });

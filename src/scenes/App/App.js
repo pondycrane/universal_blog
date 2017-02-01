@@ -15,8 +15,8 @@ import {
 import { Touchable } from '../../components';
 
 export class App extends Component {
-  constructor() {
-    super();
+  constructor( props ) {
+    super(props);
     this._handlePress = this._handlePress.bind(this);
   }
 
