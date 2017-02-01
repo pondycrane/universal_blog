@@ -10,3 +10,7 @@ To used it in Android:
         - adb reverse tcp:8081 tcp:8081
         - npm run start
         - react-native run-android
+        - if modules not found:
+	    - delete node_modules
+	    - npm install
+	    - repeat 2, 3
