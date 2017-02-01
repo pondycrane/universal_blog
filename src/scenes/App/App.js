@@ -13,14 +13,20 @@ import {
 } from 'react-native';
 
 import { Touchable } from '../../components';
+import { connect } from 'react-redux'; 
 
-export class App extends Component {
+import {
+  clickTab
+} from '../../redux/actions/action_basic'; 
+
+class App extends Component {
   constructor( props ) {
     super(props);
     this._handlePress = this._handlePress.bind(this);
   }
 
   _handlePress() {
+    this.props.dispatch( clickTab() ); 
     console.log("Can't touched this?");
   }
 
@@ -43,6 +49,9 @@ export class App extends Component {
           <Text style={styles.instructions}>
             Press Cmd+R to reload,{'\n'}
             Alt+Cmd+I for dev menu
+          </Text>
+          <Text>
+            { this.props.checked }
           </Text>
         </Touchable>
       </View>
@@ -75,3 +84,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#CAE6FE'
   }
 });
+
+function mapStateToProps( state ) {
+  console.log( state ); 
+  return {
+    checked: !state.checked ? 'not yet' : state.checked
+  }
+}
+
+export default connect( mapStateToProps )( App ); 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import { App } from '../scenes/App'; 
+import { View, StyleSheet } from 'react-native';
+import App from '../scenes/App/App'; 
 
 export default class Index extends Component {
   constructor(props) {
@@ -8,8 +8,14 @@ export default class Index extends Component {
   }
 
   render() {
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1, 
+      }
+    }); 
+
     return (
-      <View>
+      <View style={ styles.container } >
         <App />
       </View>
     );

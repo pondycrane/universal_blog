@@ -4,7 +4,6 @@
  */
 
 import { AppRegistry } from 'react-native';
-//import { App } from './src/scenes';
 import Index from './src/app/index'; 
 
 AppRegistry.registerComponent('App', () => Index);

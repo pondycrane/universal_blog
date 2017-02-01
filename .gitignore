@@ -46,3 +46,6 @@ dist/
 
 # OTHERS
 notes.txt
+
+# vim
+*.swp
