@@ -3,7 +3,6 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-  console.log( action, state ); 
   switch (action.type) {
     case 'CLICK_TAB': 
       return Object.assign( {}, state, {

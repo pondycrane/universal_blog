@@ -86,7 +86,6 @@ const styles = StyleSheet.create({
 });
 
 function mapStateToProps( state ) {
-  console.log( state ); 
   return {
     checked: !state.checked ? 'not yet' : state.checked
   }
